@@ -1,23 +1,23 @@
 package model;
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
 public class Emprestimo {
 	//Atributos
 	private Livro livro;
 	private Usuario usuario;
 	private Bibliotecario bibliotecario;
-	private LocalDate dataRetirada;
-	private LocalDate dataDevolucao;
+//	private LocalDate dataRetirada;
+//	private LocalDate dataDevolucao;
 	
-	public Emprestimo(Livro livro, Usuario usuario, Bibliotecario bibliotecario, LocalDate dataRetirada,
-			LocalDate dataDevolucao) {
+	public Emprestimo(Livro livro, Usuario usuario, Bibliotecario bibliotecario/*, LocalDate dataRetirada,
+			LocalDate dataDevolucao*/) {
 		super();
 		this.livro = livro;
 		this.usuario = usuario;
 		this.bibliotecario = bibliotecario;
-		this.dataRetirada = dataRetirada;
-		this.dataDevolucao = dataDevolucao;
+//		this.dataRetirada = dataRetirada;
+//		this.dataDevolucao = dataDevolucao;
 	}
 	public Livro getLivro() {
 		return livro;
@@ -37,7 +37,7 @@ public class Emprestimo {
 	public void setBibliotecario(Bibliotecario bibliotecario) {
 		this.bibliotecario = bibliotecario;
 	}
-	public LocalDate getDataRetirada() {
+/*	public LocalDate getDataRetirada() {
 		return dataRetirada;
 	}
 	public void setDataRetirada(LocalDate dataRetirada) {
@@ -48,7 +48,20 @@ public class Emprestimo {
 	}
 	public void setDataDevolucao(LocalDate dataDevolucao) {
 		this.dataDevolucao = dataDevolucao;
+	}*/
+	
+	//Metodo toString
+	public String toString(){
+		return "Titulo: " + this.livro.getTitulo() + "\n" +
+				"Autor: " + this.livro.getAutor() + "\n" +
+				"Usuário: " + this.usuario.getNome() + "\n";
 	}
 	
+	
+	
 
+	
+	
+	
+	
 }
