@@ -54,7 +54,19 @@ public class BDSimulado {
 	}
 	
 	
-	
+	//Retorna usuario de acordo com a matricula
+	public Usuario getUsuarioPorMatricula(String matricula){
+		Usuario retorno = null;
+		
+		//Percorrer a lista de usuarios
+		for (int i = 0; i < this.usuarios.size(); i++) {
+			if (this.usuarios.get(i).getMatricula().equals(matricula)) {
+				retorno = this.usuarios.get(i);
+			}
+		}
+		
+		return retorno;
+	}
 	
 	
 	
