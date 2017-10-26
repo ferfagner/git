@@ -8,8 +8,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		//Criar objeto da ControleExibeEmprestimo
-		ControleExibeLivro cel = new ControleExibeLivro();
-
+		//ControleExibeLivro cel = new ControleExibeLivro();
+		ControlePesquisaUsuario cpu = new ControlePesquisaUsuario();
 
 	}
 

@@ -8,7 +8,10 @@ import model.Livro;
 public class ViewExibeLivro {
 	
 	public ViewExibeLivro(Livro livro){
-		//Exibir com JOptionPane
-		JOptionPane.showMessageDialog(null, livro);
+		if (livro == null) {
+			JOptionPane.showMessageDialog(null, "Toca pro Neymar");
+		} else {
+			JOptionPane.showMessageDialog(null, livro );
+		}
 	}
 }

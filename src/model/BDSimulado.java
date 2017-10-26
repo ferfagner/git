@@ -63,8 +63,8 @@ public class BDSimulado {
 			if (this.usuarios.get(i).getMatricula().equals(matricula)) {
 				retorno = this.usuarios.get(i);
 			}
-		}
 		
+		}
 		return retorno;
 	}
 	
