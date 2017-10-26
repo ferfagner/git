@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDate;
 //import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -35,12 +36,12 @@ public class BDSimulado {
 		this.bibliotecarios.add(b2);
 		
 		//Criando Emprestimos
-		Emprestimo e1 = new Emprestimo(l1, u1, b1/*,
-				LocalDate.of(2017, 10, 10), LocalDate.of(2017, 10, 15)*/);
-		Emprestimo e2 = new Emprestimo(l2, u2, b1/*,
-				LocalDate.of(2017, 10, 11), LocalDate.of(2017, 10, 16)*/);
-		Emprestimo e3 = new Emprestimo(l3, u1, b2/*,
-				LocalDate.of(2017, 10, 18), LocalDate.of(2017, 10, 23)*/);
+		Emprestimo e1 = new Emprestimo(l1, u1, b1,
+				LocalDate.of(2017, 10, 10), LocalDate.of(2017, 10, 15));
+		Emprestimo e2 = new Emprestimo(l2, u2, b1,
+				LocalDate.of(2017, 10, 11), LocalDate.of(2017, 10, 16));
+		Emprestimo e3 = new Emprestimo(l3, u1, b2,
+				LocalDate.of(2017, 10, 18), LocalDate.of(2017, 10, 23));
 		//Adicionando emprestimos
 		this.emprestimos.add(e1);
 		this.emprestimos.add(e2);
