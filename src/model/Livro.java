@@ -47,6 +47,15 @@ public class Livro {
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
+
+	public String toString() {
+		return "Nome do Livro: " + this.titulo + "\n" +
+				"Ano de Lançamento: " + this.anoLancamento + "\n" +
+				"Autor: " + this.autor + "\n" +
+						"IBSN: " + this.ISBN + "\n"
+						+
+						"Editora: " + this.editora + "\n";
+	}
 	
 	
 

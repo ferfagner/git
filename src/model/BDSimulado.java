@@ -69,7 +69,18 @@ public class BDSimulado {
 	}
 	
 	
-	
+	//percorrer a livro de acordo com o nome
+	public Livro getLivroPorNome(String titulo){
+		Livro retorno = null;
+		
+		//Percorrer lista de Livros
+		for (int i = 0; i < this.livros.size(); i++) {
+			if (this.livros.get(i).getTitulo().equals(titulo)) {
+				retorno = this.livros.get(i);
+			}
+		}
+		return retorno;
+	}
 	
 	
 	
