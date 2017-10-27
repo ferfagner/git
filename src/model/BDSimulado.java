@@ -54,6 +54,15 @@ public class BDSimulado {
 		return this.emprestimos;
 	}
 	
+	//recupera o arrailist de usuario
+	public ArrayList<Usuario> getUsuario(){
+		return this.usuarios;
+	}
+	//recupera o arrailist de usuario
+		public ArrayList<Livro> getLivros(){
+			return this.livros;
+		}
+	
 	
 	//Retorna usuario de acordo com a matricula
 	public Usuario getUsuarioPorMatricula(String matricula){
@@ -83,8 +92,15 @@ public class BDSimulado {
 		return retorno;
 	}
 	
+	// insere um usuario na lista de usuario
+	public void insereUsuario(Usuario usuario){
+		this.usuarios.add(usuario);
+	}
 	
-	
+	// insere um Livro na lista de usuario
+		public void insereLivro(Livro livros){
+			this.livros.add(livros);
+		}
 	
 	
 	
