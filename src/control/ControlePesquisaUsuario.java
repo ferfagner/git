@@ -6,18 +6,21 @@ import view.ViewExibeUsuario;
 import view.ViewSolicitaMatricula;
 
 public class ControlePesquisaUsuario {
-	
-	public ControlePesquisaUsuario(){
-		//Criar o BDSimulado
-		BDSimulado bds = new BDSimulado();
-		//Criar view para solicitar a matriculoa
-		ViewSolicitaMatricula vsm= new ViewSolicitaMatricula();
-		String matricula = vsm.getMatricula();
-		//Retornar dados de usuario de acordo com a matricula
-		Usuario usu = bds.getUsuarioPorMatricula(matricula);
+		public BDSimulado bds;
+	public ControlePesquisaUsuario(BDSimulado bds){
 		
-		//Exibir os dados do usuario
-		ViewExibeUsuario veu = new ViewExibeUsuario(usu);
+		this.bds = bds;
 	}
+	//controle Pesquisa usuario
+		public void PesquisarUsuario(){
+			//Criar view para solicitar a matriculoa
+			ViewSolicitaMatricula vsm= new ViewSolicitaMatricula();
+			String matricula = vsm.getMatricula();
+			//Retornar dados de usuario de acordo com a matricula
+			Usuario usu = this.bds.getUsuarioPorMatricula(matricula);
+			
+			//Exibir os dados do usuario
+			ViewExibeUsuario veu = new ViewExibeUsuario(usu);
+		}
 
 }

@@ -6,14 +6,21 @@ import model.BDSimulado;
 import model.Usuario;
 import view.ViewCadastraUsuario;
 import view.ViewExibeListaUsuario;
+import view.ViewExibeUsuario;
+import view.ViewSolicitaMatricula;
 
 public class ControleUsuario {
-	 
+	//atributo
+	public BDSimulado bds;
+	
+	
 	//metodo construtor
-	public ControleUsuario(){
-		//criar bds
-		BDSimulado bds = new BDSimulado();
-		
+	public ControleUsuario(BDSimulado bds){
+					
+		this.bds = bds;
+	}
+	//Metodo para cadastrar usuario
+	public void CadastrarUsuario(){
 		//solicitar dados do usuario
 		ViewCadastraUsuario vcu = new ViewCadastraUsuario();
 		
@@ -21,10 +28,10 @@ public class ControleUsuario {
 		Usuario usuario = new Usuario(vcu.getNome(), vcu.getMatricula(), vcu.getCurso());
 		
 		//colocar usuario na Lista de usuario
-		bds.insereUsuario(usuario);
+		this.bds.insereUsuario(usuario);
 	
 		//recuperar lista de usuario
-		ArrayList<Usuario> usuarios = bds.getUsuario();
+		ArrayList<Usuario> usuarios = this.bds.getUsuario();
 		
 		//criar uma string representando todos usuarios da lista
 		
@@ -39,7 +46,6 @@ public class ControleUsuario {
 		
 	}
 	
-	
-	
+		
 	
 }

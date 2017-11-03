@@ -8,8 +8,11 @@ import view.ViewCadastraLivro;
 import view.ViewListaLivro;
 
 public class ControleLivro {
-		public ControleLivro(){
-			BDSimulado bds = new BDSimulado();
+		public BDSimulado bds;
+	
+		public ControleLivro(BDSimulado bds){
+			
+			this.bds = bds;
 			
 			ViewCadastraLivro vcl = new ViewCadastraLivro();
 			
@@ -19,7 +22,7 @@ public class ControleLivro {
 			
 			bds.insereLivro(livro);
 			
-			ArrayList<Livro> livros = bds.getLivros();
+			ArrayList<Livro> livros = this.bds.getLivros();
 			
 			String g = "";
 			

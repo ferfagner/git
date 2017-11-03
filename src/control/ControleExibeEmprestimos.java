@@ -8,13 +8,15 @@ import view.ViewExibeEmprestimos;
 import view.ViewExibeEmprestimosString;
 
 public class ControleExibeEmprestimos {
-	
-	public ControleExibeEmprestimos(){
-		//Criando o BD Simulado
-		BDSimulado bds = new BDSimulado();
+	public BDSimulado bds;
+	public ControleExibeEmprestimos(BDSimulado bds){
 		
+		this.bds = bds;
+		
+	}
+	public void ExiberEmprestimos(){
 		//Recuperar todos os emprestimos
-		ArrayList<Emprestimo> emprestimos = bds.getEmprestimos();
+		ArrayList<Emprestimo> emprestimos = this.bds.getEmprestimos();
 		
 		//Exibir todos os emprestimos
 		ViewExibeEmprestimos vee = new ViewExibeEmprestimos(emprestimos);

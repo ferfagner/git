@@ -4,17 +4,15 @@ import control.ControleExibeEmprestimos;
 import control.ControleExibeLivro;
 import control.ControleLivro;
 import control.ControlePesquisaUsuario;
+import control.ControlePrincipal;
 import control.ControleUsuario;
+import model.BDSimulado;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		//Criar objeto da ControleExibeEmprestimo
-		//ControleExibeLivro cel = new ControleExibeLivro();
-		//ControlePesquisaUsuario cpu = new ControlePesquisaUsuario();
-		//ControleUsuario cu = new ControleUsuario();
-		ControleLivro cl = new ControleLivro();
-	
+		ControlePrincipal cp = new ControlePrincipal();
+		
+		
 	}
-
 }
